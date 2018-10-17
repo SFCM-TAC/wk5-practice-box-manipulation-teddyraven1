@@ -24,8 +24,11 @@ function addBox() {
   console.log('Adding a new box');
   // TODO: Add a new div with class="box" to
   // the boxes section of the dom tree
-
-  var newBoxElement = null; // replace with your code
+    var newBoxElement = document.createElement('div');
+var boxes = document.getElementById('boxes');
+  newBoxElement.setAttribute('class', 'box grey');
+  boxes.appendChild(newBoxElement);
+   // replace with your code
   // This line is needed to make sure that new boxes
   // handle clicks. Make sure thatnewBoxElement refers
   // to the DOM node containing your new Div.
