@@ -6,7 +6,19 @@ function changeBoxColors(color) {
   // to change their background color
   // possible values of color are: 'red', 'blue', 'yellow'
   // (consider using a switch statement!)
+
+  var elements = document.getElementsByClassName('box');
+
+if (elements.length > 0) {
+
+for (var i = 0; i < elements.length; i++) {
+  elements[i].className = color + ' box';
 }
+  }
+    }
+
+
+
 
 function addBox() {
   console.log('Adding a new box');
@@ -35,8 +47,12 @@ function handleBoxClick(event) {
   // TODO: add or remove the box from the array of selectedBoxes
   // TODO: looke at styles.css and choose a class (or multiple classes)
   // to apply in order to add a border around selected boxes or
-  // remove a border from deselected boxes
+  // remove a border from deselected boxes {
+ //var border = document.getElementByClass('.box-selected');
+ //outline.border;
+
 }
+
 
 function handleColorSelect(event) {
   changeBoxColors(event.target.id);
