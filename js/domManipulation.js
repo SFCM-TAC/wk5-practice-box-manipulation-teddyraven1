@@ -18,8 +18,6 @@ for (var i = 0; i < elements.length; i++) {
     }
 
 
-
-
 function addBox() {
   console.log('Adding a new box');
   // TODO: Add a new div with class="box" to
@@ -36,11 +34,16 @@ var boxes = document.getElementById('boxes');
 }
 
 var selectedBoxes = [];
+
 function removeSelectedBoxes() {
   console.log('Removing selected boxes');
   // TODO: look at the selectedBoxes array and remove each of those
   // from their parent in the DOM tree (their parent is the div with id="boxes").
   // Think about what happens to the selectedBoxes array when you're done!
+  var boxList = document.querySelector('#boxes');
+  var firstBox = boxList.firstElementChild;
+  boxList.removeChild(firstBox);
+
 }
 
 /* Event Handlers */
@@ -53,6 +56,14 @@ function handleBoxClick(event) {
   // remove a border from deselected boxes {
  //var border = document.getElementByClass('.box-selected');
  //outline.border;
+var boxElement = document.getElementsByClassName('box-selected');
+  var boxes = document.getElementById('boxes');
+  boxElement.setAttribute('class', 'box box-selected');
+  boxes.appendChild('boxElement');
+
+
+
+
 
 }
 
